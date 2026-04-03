@@ -4,3 +4,5 @@ kiteconnect
 anthropic
 yfinance
 gunicorn
+numpy
+pandas
