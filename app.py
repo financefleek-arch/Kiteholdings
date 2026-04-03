@@ -13,7 +13,7 @@ CORS(app)
 # ---- LOAD CONFIG FROM ENV ----
 ANTHROPIC_KEY  = os.environ.get("ANTHROPIC_KEY")
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD")
-USERS          = json.loads(os.environ.get("USERS_CONFIG", "{}"))
+USERS          = json.loads(os.environ.get("USER_CONFIG", "{}"))
 
 # In-memory token store per user
 token_store = {}  # {"alice": "access_token_xxx", "bob": "access_token_yyy"}
