@@ -36,6 +36,14 @@ def get_kite(username):
 
 # ---- ROUTES ----
 
+@app.route("/api/debug")
+def debug():
+    return jsonify({
+        "users_config_raw": os.environ.get("USERS_CONFIG", "NOT SET"),
+        "users_loaded"    : list(USERS.keys()),
+        "admin_password_set": ADMIN_PASSWORD is not None
+    })
+    
 @app.route("/api/users")
 def list_users():
     auth = check_auth()
