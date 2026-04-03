@@ -1,0 +1,6 @@
+flask
+flask-cors
+kiteconnect
+anthropic
+yfinance
+gunicorn
